@@ -31,11 +31,11 @@ const bootstrap = async () => {
     )
     console.log( "serverga ulandi..." );
   
-    app.listen( PORT, () => {
-      console.log( "Server... " + PORT );
-    } )
     
   } catch (error) {
     console.log( "serverga ulashda" );
   }
+  app.listen( PORT, () => {
+    console.log( "Server... " + PORT );
+  } )
 }; bootstrap()

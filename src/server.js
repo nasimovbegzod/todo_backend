@@ -18,19 +18,24 @@ app.use(routes);
 const PORT = process.env.PORT || 3000
 
 const bootstrap = async () => {
-  await sequelize.authenticate( {
-    logging: false,
-  }
-  );
-  // Realtion()
-  await sequelize.sync(
-    {
-      alter: true,
+  try {
+    await sequelize.authenticate( {
+      logging: false,
     }
-  )
-  console.log( "serverga ulandi..." );
-
-  app.listen( PORT, () => {
-    console.log( "Server... " + PORT );
-  } )
+    );
+    // Realtion()
+    await sequelize.sync(
+      {
+        alter: true,
+      }
+    )
+    console.log( "serverga ulandi..." );
+  
+    app.listen( PORT, () => {
+      console.log( "Server... " + PORT );
+    } )
+    
+  } catch (error) {
+    console.log( "serverga ulashda" );
+  }
 }; bootstrap()

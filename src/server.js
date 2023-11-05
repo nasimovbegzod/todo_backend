@@ -30,11 +30,11 @@ const bootstrap = async () => {
       }
     )
     console.log( "serverga ulandi..." );
-  
-    
   } catch (error) {
-    console.log( "serverga ulashda" );
+    console.log( "Xatolik" );
   }
+
+
   app.listen( PORT, () => {
     console.log( "Server... " + PORT );
   } )

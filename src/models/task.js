@@ -22,7 +22,7 @@ Task.init(
     }
   },
   {
-    tableName: "todo_dat",
+    tableName: "todo_data",
     sequelize,
     timestamps: true,
     updatedAt: false,
